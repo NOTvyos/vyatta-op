@@ -1,1 +1,2808 @@
-debian/changelog
+vyatta-op (0.14.0+vyos2+current8) unstable; urgency=medium
+  
+  * T963: no authorization logs
+
+
+ -- hagbard <vyosdev@derith.de>  Wed, 07 Nov 2018 12:38:20 -0800
+
+vyatta-op (0.14.0+vyos2+current7) unstable; urgency=medium
+
+  * T870: Commit-confirm restarts the server even after commit
+    
+    - show reboot now also show if scheduled via commit-confirm or systemd.
+
+ -- hagbard <vyosdev@derith.de>  Tue, 09 Oct 2018 16:07:22 -0700 
+
+vyatta-op (0.14.0+vyos2+current6) unstable; urgency=medium
+
+  * T588: Remove DNS forwarder restart command in favor if XML interface definition
+
+ -- Christian Poessinger <christian@poessinger.com>  Wed, 11 Apr 2018 20:33:53 +0200
+
+vyatta-op (0.14.0+vyos2+current5) unstable; urgency=medium
+
+  * T157: Remove "install system" command
+
+ -- Christian Poessinger <christian@poessinger.com>  Sat, 10 Mar 2018 18:29:30 +0100
+
+vyatta-op (0.14.0+vyos2+current4) unstable; urgency=medium
+
+  * T523: Use new location for dnsmasq config files
+
+ -- Christian Poessinger <christian@poessinger.com>  Sun, 21 Jan 2018 17:10:30 +0100
+
+vyatta-op (0.14.0+vyos2+current3) unstable; urgency=medium
+
+  * Changed 'show tech-support' implementation to a redacted output, private
+    information is removed.
+  * Added 'show tech-support private' which contains non redacted output
+
+ -- Christian Poessinger <christian@poessinger.com>  Sun, 29 Oct 2017 15:36:45 +0100
+
+vyatta-op (0.14.0+vyos2+current2) unstable; urgency=medium
+
+  * New implementation of "run show version"
+
+ --  <daniil@baturin.org>  Thu, 03 Mar 2016 09:57:48 -0500
+
+vyatta-op (0.14.0+vyos2+current1) unstable; urgency=medium
+
+  [ Thomas Jepp ]
+  * Add missing build depends for Jessie.
+
+  [ Daniil Baturin ]
+  * Remove referenced to Vyatta from 'show version' completion help.
+  * Easter egg: 'show version funny' command that displays limericks after version information.
+
+  [ Kim Hagen ]
+
+ -- Kim Hagen <kim.sidney@gmail.com>  Sun, 24 Jan 2016 15:19:11 -0500
+
+vyatta-op (0.14.0+vyos2+lithium12) unstable; urgency=low
+
+  [ Thomas Jepp ]
+  * Implemented a DNS forwarder restart command - "restart dns forwarding"
+
+  [ Alex Harpin ]
+  * vyatta-op: set 'restart dns forwarding' to use vyatta-dns-forwarding.pl
+
+ -- Alex Harpin <development@landsofshadow.co.uk>  Thu, 19 Nov 2015 22:30:51 +0000
+
+vyatta-op (0.14.0+vyos2+lithium11) unstable; urgency=low
+
+  [ Alex Harpin]
+  * vyatta-op: skip unknown interfaces in "show interfaces counters/detail"
+
+ -- Alex Harpin <development@landsofshadow.co.uk>  Mon, 02 Nov 2015 19:39:46 +0000
+ 
+vyatta-op (0.14.0+vyos2+lithium10) unstable; urgency=low
+
+  [ Alex Harpin]
+  * vyatta-op: strip-private removes "user" rather than actual username
+  * vyatta-op: remove user login public key information with strip-private
+  * vyatta-op: update dh_gencontrol with new development build flag
+
+ -- Alex Harpin <development@landsofshadow.co.uk>  Thu, 18 Jun 2015 21:14:17 +0100
+ 
+vyatta-op (0.14.0+vyos2+lithium9) unstable; urgency=low
+
+  * Replace the old hypervisor_vendor utility with hvinfo.
+  * Update debian/control to match the reality.
+
+ -- Daniil Baturin <daniil@baturin.org>  Thu, 09 Apr 2015 00:27:36 +0200
+
+vyatta-op (0.14.0+vyos2+lithium8) unstable; urgency=low
+
+  * Bug #377: make commands pipe throw an error in op mode.
+
+ -- Daniil Baturin <daniil@baturin.org>  Tue, 17 Feb 2015 09:49:12 +0100
+
+vyatta-op (0.14.0+vyos2+lithium7) unstable; urgency=low
+
+  [ Alex Harpin ]
+  * vyatta-op: remove unused reboot configuration nodes
+  * vyatta-op: update the system poweroff cli command to be script based
+  * vyatta-op: final fix for the ssh client failing to disconnect on reboot
+  * vyatta-op: replace 'show shutdown' with 'show poweroff' and use script
+
+ -- Alex Harpin <development@landsofshadow.co.uk>  Sun, 25 Jan 2015 09:17:06 +0000
+
+vyatta-op (0.14.0+vyos2+lithium6) unstable; urgency=low
+
+  * Bug #456: add simple CLI for iperf.
+
+ -- Daniil Baturin <daniil@baturin.org>  Tue, 20 Jan 2015 15:50:12 +0100
+
+vyatta-op (0.14.0+vyos2+lithium5) unstable; urgency=low
+
+  [ Alex Harpin ]
+  * vyatta-op: fix for show host domain replies (none)
+
+ -- Alex Harpin <development@landsofshadow.co.uk>  Wed, 14 Jan 2015 15:49:29 +0000
+
+vyatta-op (0.14.0+vyos2+lithium4) unstable; urgency=low
+
+  [ Alex Harpin ]
+  * vyatta-op: on shutdown/reboot the client ssh session doesn't disconnect
+
+ -- Alex Harpin <development@landsofshadow.co.uk>  Thu, 01 Jan 2015 11:55:53 +0000
+ 
+vyatta-op (0.14.0+vyos2+lithium3) unstable; urgency=low
+
+  [ Alex Harpin ]
+  * Revert "Add an option to disable inotify to fail -f commands."
+
+ -- Alex Harpin <development@landsofshadow.co.uk>  Wed, 31 Dec 2014 15:36:15 +0000
+ 
+vyatta-op (0.14.0+vyos2+lithium2) unstable; urgency=low
+
+  * Force release
+
+ -- Alex Harpin <development@landsofshadow.co.uk>  Sun, 14 Dec 2014 20:11:37 +0000
+ 
+vyatta-op (0.14.0+vyos2+lithium1) unstable; urgency=low
+
+  * New branch
+
+ -- Alex Harpin <development@landsofshadow.co.uk>  Sun, 30 Nov 2014 23:13:05 +0000
+ 
+vyatta-op (0.14.0+vyos1+helium17) unstable; urgency=low
+
+  [ Alex Harpin ]
+  * vyatta-op: formatting changes for style consistency
+  * vyatta-op: fix for the config file copy via scp failure
+
+  [ Daniil Baturin ]
+
+ -- Daniil Baturin <daniil@baturin.org>  Thu, 09 Oct 2014 22:56:24 +0200
+
+vyatta-op (0.14.0+vyos1+helium16) unstable; urgency=low
+
+  * Add an option to disable inotify to fail -f commands.
+
+ -- Daniil Baturin <daniil@baturin.org>  Wed, 08 Oct 2014 18:27:55 +0200
+
+vyatta-op (0.14.0+vyos1+helium15) unstable; urgency=low
+
+  [ upa ]
+  * Add vxlan support
+
+  [ Daniil Baturin ]
+
+ -- Daniil Baturin <daniil@baturin.org>  Wed, 08 Oct 2014 16:39:50 +0200
+
+vyatta-op (0.14.0+vyos1+helium14) unstable; urgency=low
+
+  * Bug 300: disallow entering conf mode as root.
+
+ -- Daniil Baturin <daniil@baturin.org>  Tue, 02 Sep 2014 20:44:25 +0200
+
+vyatta-op (0.14.0+vyos1+helium13) unstable; urgency=low
+
+  * Boot type check had unionfs hardcoded in it. Now it has overlayfs
+    hardcoded in it.
+
+ -- Daniil Baturin <daniil@baturin.org>  Fri, 25 Jul 2014 08:55:34 +0200
+
+vyatta-op (0.14.0+vyos1+helium12) unstable; urgency=low
+
+  * Update package maintainer address.
+
+ -- Daniil Baturin <daniil@baturin.org>  Tue, 08 Jul 2014 16:55:12 +0200
+
+vyatta-op (0.14.0+vyos1+helium11) unstable; urgency=low
+
+  * Add Maya calendar support to date commands
+
+ -- Daniil Baturin <daniil@baturin.org>  Mon, 07 Jul 2014 10:56:08 +0200
+
+vyatta-op (0.14.0+vyos1+helium10) unstable; urgency=low
+
+  * Add more interface types to "show arp" completion.
+
+ -- Daniil Baturin <daniil@baturin.org>  Thu, 03 Jul 2014 20:22:50 +0200
+
+vyatta-op (0.14.0+vyos1+helium9) unstable; urgency=low
+
+  * Bug #251: add "commands" filter to completion list.
+
+ -- Daniil Baturin <daniil@baturin.org>  Wed, 02 Jul 2014 14:37:04 +0200
+
+vyatta-op (0.14.0+vyos1+helium8) unstable; urgency=low
+
+  * Bug #104: add help text for the strip-private pipe.
+  * Bug #251: add completion and help for the "| commands" filter.
+
+ -- Daniil Baturin <daniil@baturin.org>  Wed, 02 Jul 2014 05:19:48 +0200
+
+vyatta-op (0.14.0+vyos1+helium7) unstable; urgency=low
+
+  * Bug #104: add pipe for stripping private information from config.
+
+ -- Daniil Baturin <daniil@baturin.org>  Wed, 02 Jul 2014 03:47:45 +0200
+
+vyatta-op (0.14.0+vyos1+helium6) unstable; urgency=low
+
+  [ Kim Hagen ]
+  * Bug #71: "show system memory cache" gives "permission denied"
+    message
+
+  [ Daniil Baturin ]
+  * Bug #39: Add op mode commands for sending gratuitous ARP
+    requests/replies.
+
+ -- Daniil Baturin <daniil@baturin.org>  Wed, 02 Jul 2014 01:59:32 +0200
+
+vyatta-op (0.14.0+vyos1+helium5) unstable; urgency=low
+
+  * Replace Vyatta with VyOS in "show license" command help.
+  * Bug #159: add op mode support for dummy interfaces.
+  * Bug #170: add "clear interface" commands for L2TPv3 interfaces.
+  * Bug #170: add L2TPv3 interface type to monitor command generator.
+
+ -- Daniil Baturin <daniil@baturin.org>  Sun, 06 Apr 2014 15:40:11 +0200
+
+vyatta-op (0.14.0+vyos1+helium4) unstable; urgency=low
+
+  [ higebu ]
+  * Add support for l2tpv3
+
+  [ Daniil Baturin ]
+
+ -- Daniil Baturin <daniil@baturin.org>  Sun, 06 Apr 2014 13:43:26 +0200
+
+vyatta-op (0.14.0+vyos1+helium3) unstable; urgency=low
+
+  * Bug #156: Check for 'vyatta' or 'vyos' kernels.
+  * Bug #157: Replace 'Intel 32/64bit' with 'x86 32/64-bit' in 'show
+    version'.
+
+ -- Daniil Baturin <daniil@baturin.org>  Wed, 05 Mar 2014 17:37:23 +0100
+
+vyatta-op (0.14.0+vyos1+helium2) unstable; urgency=low
+
+  * Bug #148: 'ping' does ipv6 too, but help only mentions IPv4
+
+ -- Daniil Baturin <daniil@baturin.org>  Tue, 04 Mar 2014 15:03:12 +0100
+
+vyatta-op (0.14.0+vyos1+helium1) unstable; urgency=low
+
+  * New branch
+
+ -- Daniil Baturin <daniil@baturin.org>  Sat, 15 Feb 2014 19:45:08 +0100
+
+vyatta-op (0.14.0+hydrogen9) unstable; urgency=low
+
+  * Rename s/detailed/detail/ for consistenct with the rest of the
+    system.
+
+ -- Daniil Baturin <daniil@baturin.org>  Sun, 22 Dec 2013 17:13:14 +0100
+
+vyatta-op (0.14.0+hydrogen8) unstable; urgency=low
+
+  * Bug #95: Issue warnings on attempts to monitor rules with disabled
+    logging.
+
+ -- Daniil Baturin <daniil@baturin.org>  Sat, 21 Dec 2013 08:38:48 +0100
+
+vyatta-op (0.14.0+hydrogen7) unstable; urgency=low
+
+  * Bug #24: add a command to display recently logged in users.
+
+ -- Daniil Baturin <daniil@baturin.org>  Mon, 02 Dec 2013 03:36:21 +0100
+
+vyatta-op (0.14.0+hydrogen6) unstable; urgency=low
+
+  * Bug #3: Display RAM usage overview in simple total/free/used format.
+
+ -- Daniil Baturin <daniil@baturin.org>  Mon, 02 Dec 2013 02:23:03 +0100
+
+vyatta-op (0.14.0+hydrogen5) unstable; urgency=low
+
+  * Add dependencies on usbutils and lsscsi.
+
+ -- Daniil Baturin <daniil@baturin.org>  Fri, 08 Nov 2013 00:02:56 +0100
+
+vyatta-op (0.14.0+hydrogen4) unstable; urgency=low
+
+  * Make USB vieweing command more consistent with other hardware
+    commands.
+  * Add command to view SCSI devices (show hardware scsi [detailed).
+  * Fix typo in "show hardware scsi detailed" command.
+
+ -- Daniil Baturin <daniil@baturin.org>  Thu, 07 Nov 2013 23:23:32 +0100
+
+vyatta-op (0.14.0+hydrogen3) unstable; urgency=low
+
+  * Remove fake entry from changelog
+
+ -- Daniil Baturin <daniil@baturin.org>  Sun, 03 Nov 2013 22:20:42 +0100
+
+vyatta-op (0.14.0+hydrogen2) unstable; urgency=low
+
+  * Remove "format system-floppy" command.
+
+ -- Daniil Baturin <daniil@baturin.org>  Sun, 03 Nov 2013 21:50:22 +0100
+
+vyatta-op (0.13.275+daisy9) unstable; urgency=low
+
+  * bz8631: Fix lease file regex to include leases on vif
+
+ -- James Davidson <james.davidson@vyatta.com>  Wed, 19 Jun 2013 14:18:13 -0700
+
+vyatta-op (0.13.275+daisy8) unstable; urgency=low
+
+  * 8970: Fix for show monitor
+
+ -- Saurabh Mohan <saurabh@vyatta.com>  Mon, 17 Jun 2013 15:00:10 -0700
+
+vyatta-op (0.13.275+daisy7) unstable; urgency=low
+
+  * allow optional dependency on vyatta-unicast
+
+ -- Robert Bays <robert@vyatta.com>  Sat, 01 Jun 2013 16:50:46 -0700
+
+vyatta-op (0.13.275+daisy6) unstable; urgency=low
+
+  * Update DHCP server commands used in "show tech-support"
+
+ -- James Davidson <james.davidson@vyatta.com>  Fri, 24 May 2013 13:37:43 -0700
+
+vyatta-op (0.13.275+daisy5) unstable; urgency=low
+
+  * Update "monitor interfaces" generation scripts
+  * Use node generation scripts in build
+  * Add size and files options to "traffic save"
+
+ -- James Davidson <james.davidson@vyatta.com>  Fri, 26 Apr 2013 12:13:01 -0700
+
+vyatta-op (0.13.275+daisy4) unstable; urgency=low
+
+  * Sync up SNMPv3 support
+
+ -- James Davidson <james.davidson@vyatta.com>  Wed, 06 Mar 2013 11:35:53 -0800
+
+vyatta-op (0.13.275+daisy3) unstable; urgency=low
+
+  * Skip dmesg files starting with "Nothing has been logged yet"
+
+ -- James Davidson <james.davidson@vyatta.com>  Tue, 26 Feb 2013 11:55:09 -0800
+
+vyatta-op (0.13.275+daisy2) unstable; urgency=low
+
+  * Display virt-brand version file if running in VM
+
+ -- James Davidson <james.davidson@vyatta.com>  Wed, 06 Feb 2013 12:12:26 -0800
+
+vyatta-op (0.13.275+daisy1) unstable; urgency=low
+
+  * create daisy branch
+
+ -- John Southworth <john.southworth@vyatta.com>  Sat, 13 Oct 2012 13:31:22 -0700
+
+vyatta-op (0.13.275) unstable; urgency=low
+
+  * new branch
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 12 Oct 2012 19:47:51 -0700
+
+vyatta-op (0.13.274) unstable; urgency=low
+
+  * Bugfix 8421: fix show interfaces vrrp detail node to use new syntax
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 08 Oct 2012 21:50:24 -0700
+
+vyatta-op (0.13.273) unstable; urgency=low
+
+  * Fix use of LESSCLOSE
+
+ -- James Davidson <james.davidson@vyatta.com>  Tue, 02 Oct 2012 15:47:40 -0700
+
+vyatta-op (0.13.272) unstable; urgency=low
+
+  * Fix handling of unknown interface types
+
+ -- Stephen Hemminger <shemminger@vyatta.com>  Mon, 17 Sep 2012 17:35:12 -0700
+
+vyatta-op (0.13.271) unstable; urgency=low
+
+  * Bugfix 8300: show proper output for 'show interfaces vrrp'; also
+    fixes bug 8317
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 17 Sep 2012 14:06:22 -0700
+
+vyatta-op (0.13.270) unstable; urgency=low
+
+  * bug fix for 8274 - fix deprecated commands in show tech support.
+
+ -- Deepti Kulkarni <deepti@vyatta.com>  Mon, 17 Sep 2012 11:06:55 -0700
+
+vyatta-op (0.13.269) unstable; urgency=low
+
+  * Make opmode completions show the list on blank completion like
+    config mode now does
+  * Bugfix 8310: remove 'show log content-inspection'
+
+ -- John Southworth <john.southworth@vyatta.com>  Wed, 12 Sep 2012 16:14:34 -0700
+
+vyatta-op (0.13.268) unstable; urgency=low
+
+  * Fix use of lesspipe
+
+ -- James Davidson <james.davidson@vyatta.com>  Wed, 05 Sep 2012 10:24:59 -0700
+
+vyatta-op (0.13.267) unstable; urgency=low
+
+  * command wrapper doesn't need a login shell
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 30 Aug 2012 09:31:50 -0700
+
+vyatta-op (0.13.266) unstable; urgency=low
+
+  * Move display of entitlement info to the top of tech-support output
+
+ -- James Davidson <james.davidson@vyatta.com>  Tue, 28 Aug 2012 17:07:40 -0700
+
+vyatta-op (0.13.265) unstable; urgency=low
+
+  * Fix handling of single quote character (') when parsing command
+
+ -- James Davidson <james.davidson@vyatta.com>  Tue, 21 Aug 2012 18:01:24 -0700
+
+vyatta-op (0.13.264) unstable; urgency=low
+
+  * Bugfix 8217: VTI: add clear and monitor interfaces commands.
+
+ -- Saurabh Mohan <saurabh@vyatta.com>  Thu, 09 Aug 2012 13:15:44 -0700
+
+vyatta-op (0.13.263) unstable; urgency=low
+
+  * Fix NAT regex to also find MASQ logs.
+
+ -- James Davidson <james.davidson@vyatta.com>  Wed, 01 Aug 2012 17:46:54 -0700
+
+vyatta-op (0.13.262) unstable; urgency=low
+
+  * Fix NAT regex and correct log file sort order.
+
+ -- James Davidson <james.davidson@vyatta.com>  Mon, 09 Jul 2012 12:31:39 -0700
+
+vyatta-op (0.13.261) unstable; urgency=low
+
+  * Ignore the default vti interface.
+
+ -- Saurabh Mohan <saurabh@vyatta.com>  Mon, 04 Jun 2012 16:43:00 -0700
+
+vyatta-op (0.13.260) unstable; urgency=low
+
+  * VTI show support.
+
+ -- Saurabh Mohan <saurabh@vyatta.com>  Wed, 16 May 2012 16:44:59 -0700
+
+vyatta-op (0.13.259) unstable; urgency=low
+
+  * Move VRRP to its own package
+  * Remove vrrp scripts from Makefile
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 15 May 2012 20:47:26 -0700
+
+vyatta-op (0.13.258) unstable; urgency=low
+
+  * Add Vyatta wrappers for new keepalived output
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 15 May 2012 11:38:07 -0700
+
+vyatta-op (0.13.257) unstable; urgency=low
+
+  * Moved get_terminal_width to Vyatta::Misc
+
+ -- John Southworth <john.southworth@vyatta.com>  Wed, 09 May 2012 08:51:47 -0700
+
+vyatta-op (0.13.256) unstable; urgency=low
+
+  * Use native perl code to figure othe the terminal width
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 08 May 2012 16:00:22 -0700
+
+vyatta-op (0.13.255) unstable; urgency=low
+
+  * Use terminal width for interface description wrapping
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 08 May 2012 15:00:07 -0700
+
+vyatta-op (0.13.254) unstable; urgency=low
+
+  * bug 7985: fix regex for rename system image command
+
+ -- Deepti Kulkarni <deepti@vyatta.com>  Mon, 16 Apr 2012 05:02:11 -0700
+
+vyatta-op (0.13.253) unstable; urgency=low
+
+  * bug fix for 5792 - Fix the op-mode system image commands for live-cd
+
+ -- Deepti Kulkarni <deepti@vyatta.com>  Thu, 12 Apr 2012 03:10:10 -0700
+
+vyatta-op (0.13.252) unstable; urgency=low
+
+  * Bugfix 8013: Fix space at end of line in command conversion
+
+ -- John Southworth <john.southworth@vyatta.com>  Wed, 11 Apr 2012 13:30:45 -0700
+
+vyatta-op (0.13.251) unstable; urgency=low
+
+  * Use Interface.pm to find interface state
+
+ -- Stephen Hemminger <shemminger@vyatta.com>  Tue, 10 Apr 2012 18:30:35 -0700
+
+vyatta-op (0.13.250) unstable; urgency=low
+
+  [ Stephen Hemminger ]
+  * Better perl style in boot image
+
+  [ Deepti Kulkarni ]
+  * fix to use the correct perl function
+
+ -- Deepti Kulkarni <deepti@vyatta.com>  Tue, 10 Apr 2012 09:53:16 -0700
+
+vyatta-op (0.13.249) unstable; urgency=low
+
+  * Make ping feel like all the other system commands
+  * Remove unneeded debugging information from ping script
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 22 Mar 2012 10:38:50 -0700
+
+vyatta-op (0.13.248) unstable; urgency=low
+
+  * better fix for bug 7896
+  * Initial commit for new ping completion
+  * Add ping templates for completion
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 15 Mar 2012 00:28:12 +0000
+
+vyatta-op (0.13.247) unstable; urgency=low
+
+  [ Stephen Hemminger ]
+  * Add new ping command script
+
+  [ John Southworth ]
+  * Bugfix 7527: Don't override VYATTA_PAGER value if it was previously
+    set
+  * Bugfix 7896: make the pppoe log write as the root user
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 13 Mar 2012 22:57:18 +0000
+
+vyatta-op (0.13.246) unstable; urgency=low
+
+  * new branch
+
+ -- Deepti Kulkarni <deepti@vyatta.com>  Sat, 03 Mar 2012 02:26:17 -0800
+
+vyatta-op (0.13.245) unstable; urgency=low
+
+  * Fix tech-support save command
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 01 Mar 2012 17:34:53 +0000
+
+vyatta-op (0.13.244) unstable; urgency=low
+
+  * Allow users to import ssh keys when using image commands
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 01 Mar 2012 17:14:20 +0000
+
+vyatta-op (0.13.243) unstable; urgency=low
+
+  * Bugfix 7555: Allow users to import ssh keys when using 'show tech-
+    support save' commands
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 01 Mar 2012 00:54:05 +0000
+
+vyatta-op (0.13.242) unstable; urgency=low
+
+  * bug fix for 7826 - fixed to use correct perl functions.
+
+ -- Deepti Kulkarni <deepti@vyatta.com>  Wed, 29 Feb 2012 06:15:51 -0800
+
+vyatta-op (0.13.241) unstable; urgency=low
+
+  * Bugfix 4053: add missing top level 'monitor interfaces'
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 28 Feb 2012 12:49:20 -0800
+
+vyatta-op (0.13.240) unstable; urgency=low
+
+  * fix for bug 7719 - delete system image should accept 'y' or 'n'
+
+ -- Deepti Kulkarni <deepti@vyatta.com>  Mon, 27 Feb 2012 05:08:05 -0800
+
+vyatta-op (0.13.239) unstable; urgency=low
+
+  * Bugfix 4053: implement bandwidth utilization montior commands 'mon
+    int <type> <name>'; 'mon int <type> <name> flow'
+  * Add dendencies for bugfix 4053 to debian/control
+
+ -- John Southworth <john.southworth@vyatta.com>  Wed, 22 Feb 2012 23:55:13 +0000
+
+vyatta-op (0.13.238) unstable; urgency=low
+
+  * Add console keymap reconfigure op-mode command
+  * Suggest package dialog
+
+ -- Stephen Hemminger <shemminger@vyatta.com>  Wed, 22 Feb 2012 14:37:32 -0800
+
+vyatta-op (0.13.237) unstable; urgency=low
+
+  * Handle 64 bit counters in show interfaces
+
+ -- Stephen Hemminger <shemminger@vyatta.com>  Wed, 22 Feb 2012 10:49:08 -0800
+
+vyatta-op (0.13.236) unstable; urgency=low
+
+  * Add headers to show montioring command
+
+ -- John Southworth <john.southworth@vyatta.com>  Wed, 22 Feb 2012 10:11:37 -0800
+
+vyatta-op (0.13.235) unstable; urgency=low
+
+  * Bugfix 2581: show protocol debugging summary with 'show monitoring'
+  * Bugfix 5806: Don't show ntp.vyatta.com by default for show ntp
+
+ -- John Southworth <john.southworth@vyatta.com>  Wed, 22 Feb 2012 08:55:39 -0800
+
+vyatta-op (0.13.234) unstable; urgency=low
+
+  * Bug 4086:fixed order of display in show dns forwarding nameservers,
+    removed redundant information
+
+ -- Gaurav <gaurav.sinha@vyatta.com>  Tue, 21 Feb 2012 16:31:54 -0800
+
+vyatta-op (0.13.233) unstable; urgency=low
+
+  * Add bridge info to show tech support
+
+ -- Stephen Hemminger <shemminger@vyatta.com>  Tue, 21 Feb 2012 12:14:33 -0800
+
+vyatta-op (0.13.232) unstable; urgency=low
+
+  [ Stephen Hemminger ]
+  * Add missing newline at end of file
+
+  [ John Southworth ]
+  * escape escape characters so they aren't evaluated during command
+    processing
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 14 Feb 2012 21:54:50 -0800
+
+vyatta-op (0.13.231) unstable; urgency=low
+
+  * Bugfix 7774: fix quoted string variable expression
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 13 Feb 2012 18:54:12 -0800
+
+vyatta-op (0.13.230) unstable; urgency=low
+
+  * Improve firewall log matches
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 02 Feb 2012 11:17:04 -0800
+
+vyatta-op (0.13.229) unstable; urgency=low
+
+  * Fix 'show bridge' help text
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 30 Jan 2012 22:48:09 +0000
+
+vyatta-op (0.13.228) unstable; urgency=low
+
+  * add missing node.def from monitor interfaces vrrp
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 20 Jan 2012 18:36:25 +0000
+
+vyatta-op (0.13.227) unstable; urgency=low
+
+  * bug 7714: Fixing runtime script error seen in show dns forwarding
+    statistics
+
+ -- Gaurav Sinha <gaurav.sinha@vyatta.com>  Mon, 09 Jan 2012 11:02:57 -0800
+
+vyatta-op (0.13.226) unstable; urgency=low
+
+  * Send interpreter errors to stderr
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 05 Jan 2012 10:15:20 -0800
+
+vyatta-op (0.13.225) unstable; urgency=low
+
+  * Fix NAT monitor rule log prefix.
+
+ -- Daniil Baturin <daniil.baturin@vyatta.com>  Wed, 04 Jan 2012 04:50:46 +0700
+
+vyatta-op (0.13.224) unstable; urgency=low
+
+  * Update NAT monitor templates.
+  * Remove old NAT monitor templates.
+
+ -- Daniil Baturin <daniil.baturin@vyatta.com>  Wed, 04 Jan 2012 02:13:08 +0700
+
+vyatta-op (0.13.223) unstable; urgency=low
+
+  * Bugfix 7473: Display hardware model, S/N and UUID if available.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Thu, 29 Dec 2011 14:23:19 -0800
+
+vyatta-op (0.13.222) unstable; urgency=low
+
+  * Add monitoring for vrrp interfaces
+
+ -- John Southworth <john.southworth@vyatta.com>  Wed, 14 Dec 2011 15:52:41 -0800
+
+vyatta-op (0.13.221) unstable; urgency=low
+
+  * Fix a few completion problems
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 09 Dec 2011 12:16:12 -0800
+
+vyatta-op (0.13.220) unstable; urgency=low
+
+  * Adjust show interfaces for maximum length of interface name
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 09 Dec 2011 09:31:38 -0800
+
+vyatta-op (0.13.219) unstable; urgency=low
+
+  * Add show interfaces for vrrp interfaces
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 05 Dec 2011 12:04:32 -0800
+
+vyatta-op (0.13.218) unstable; urgency=low
+
+  * boot-image: fix perl critic warnings
+
+ -- Stephen Hemminger <shemminger@vyatta.com>  Tue, 29 Nov 2011 11:01:26 -0800
+
+vyatta-op (0.13.217) unstable; urgency=low
+
+  * Fix case where node.tag was sent to script instead of the actual
+    argument
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 15 Nov 2011 14:13:46 -0800
+
+vyatta-op (0.13.216) unstable; urgency=low
+
+  * Force release
+
+ -- Daniil Baturin <daniil.baturin@vyatta.com>  Tue, 15 Nov 2011 23:51:07 +0700
+
+vyatta-op (0.13.215) unstable; urgency=low
+
+  * Rename "reset connection-tracking" to "reset aconntrack" to be
+    consistent with other packages.
+
+ -- Daniil Baturin <daniil.baturin@vyatta.com>  Tue, 15 Nov 2011 23:49:06 +0700
+
+vyatta-op (0.13.214) unstable; urgency=low
+
+  * :Fixing bug 4086, added support for showing domain overrides
+
+ -- Gaurav Sinha <gaurav.sinha@vyatta.com>  Wed, 09 Nov 2011 16:38:31 -0800
+
+vyatta-op (0.13.213) unstable; urgency=low
+
+  * Fix perlcritic warning about bareword file handle
+  * cleanup rename-image
+
+ -- Stephen Hemminger <shemminger@vyatta.com>  Wed, 09 Nov 2011 08:19:04 -0800
+
+vyatta-op (0.13.212) unstable; urgency=low
+
+  * Remove accidental commit of 'show system boot-messages commit'
+    command, this was part of a mockup for a proposed bugfix and I
+    didn't intend to commit it
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 07 Nov 2011 18:05:50 -0600
+
+vyatta-op (0.13.211) unstable; urgency=low
+
+  * Fix install help text
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 01 Nov 2011 13:40:03 -0500
+
+vyatta-op (0.13.210) unstable; urgency=low
+
+  * Bugfix 7603: add reset top level to allowed list for operator users
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 01 Nov 2011 13:22:55 -0500
+
+vyatta-op (0.13.209) unstable; urgency=low
+
+  * Wait for user to hit enter before continuing with a reboot
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 01 Nov 2011 11:31:53 -0500
+
+vyatta-op (0.13.208) unstable; urgency=low
+
+  * Create new ping command with the following semantics
+  * Add monitor command for traceroutes using mtr
+  * Add monitor for operational commands
+  * Directory structure for Monitor NAT
+  * Move 'clear arp' to 'reset ip arp'
+  * Move 'clear dns' and 'clear connection-tracking' to 'reset dns' and
+  * Move init-floppy install-system and install-image
+  * Initial traceroute rework checkin
+  * Fixup the help text for top level commands; move terminal to set
+    terminal
+  * Add toplevel node.def for install
+  * Move some more commands
+  * Fix the help text for connection-tracking
+  * Move 'clear vrrp' to 'reset vrrp'
+  * fix help text for 'reset vrrp master interface group'
+  * Remove no top level verb
+  * Update operator level user top level commands to reflect changes in
+    the command structure
+  * Add reset terminal command to fix broken terminal sessions with out
+    reconnecting
+  * move 'remove raid' to 'delete raid'
+  * Initial monitor vpn implementation. Other montior commands will be
+    build on these scripts
+  * Move the background monitoring for vpn under each of the categories
+    as suggested by support
+  * Forground monitoring for many daemons
+  * Background monitoring for services
+  * Add firewall forground monitoring
+  * Add background monitoring for firewalls
+  * Fix ping commands off by one problem, fix help txt for ping ipv4
+  * Add 'monitor firewall ipv6-name' command
+  * Move 'show debugging' to 'show monitoring protocols' to reflect new
+    debugging layout
+  * Move nodes from services since in other operational commands we
+    don't
+  * Cleanup background monitor sessions on logout
+  * Forgot to fix a typo in the local copy of vyatta-monitor-cleanup
+  * Add 'show monitoring' script to list active background monitoring
+  * Forground monitoring for nat
+  * Add background monitoring for NAT
+  * Move packet capture to 'monitor interfaces'
+  * More monitor interface traffic commands
+  * Fix 'monitor interface traffic save'
+  * Implement packet capture for vifs
+  * Remove extraneous run commands
+  * Fix filter completion
+  * Fix ipv6 matching in ping and traceroute
+  * remove run from 'montior interface [type] [name]' command
+  * remove run from 'montior interface [type] [name] vif [name]' command
+  * move 'show log tail' to 'monitor log'
+  * 'show log tail <NUMBER>' should still be a show command, not a
+    monitor command.
+  * Add monitor openvpn
+  * Allow log filtering similar to the way the monitor commands work
+  * Fix up completion for 'show log firewall'
+  * Fix up completion for 'monitor firewall'
+  * Fix up completion for 'monitor nat'
+  * Fix 'monitor nat' tag
+  * Add a command to stop all current background monitoring processes
+  * Bugfix 7557: Move shutdown to poweroff, change confirmation from
+    default in the affirmative to defualt in the negative.
+  * Make the reboot syntax the same as the poweroff syntax; require the
+    affirmative answer instead of defaulting to it
+  * Bugfix 5806, 7552: Fix set date ntp node.def to list proper servers
+    from configuration, and run on unprivledged ports so the commands
+    work at the same time the ntp service is running.
+  * Bugfix 7575: Make tshark run as a normal user so that writing files
+    works properly
+  * Add monitoring for specific openvpn interface processes
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 27 Oct 2011 17:47:27 -0500
+
+vyatta-op (0.13.207) unstable; urgency=low
+
+  * Don't show an error message when we can't turn echo on (this is the
+    case with the webgui)
+  * Bugfix 7577: Only show the remote uri help if there is no completion
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 21 Oct 2011 15:26:59 -0500
+
+vyatta-op (0.13.206) unstable; urgency=low
+
+  * Workaround for bug 7570, turning echo on manually when running a
+    templated command should fix the majority of the problems. It would
+    be better to fix the readline/less interaction in the future
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 20 Oct 2011 16:47:21 -0500
+
+vyatta-op (0.13.205) unstable; urgency=low
+
+  * Allow completions using normal dirctory paths as well as a shortcut
+    to running:// in file name completions
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 17 Oct 2011 15:50:09 -0500
+
+vyatta-op (0.13.204) unstable; urgency=low
+
+  * Make directory completions, if it is the first word of the
+    completion, work so that users can easily find scripts they may be
+    trying to run.
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 17 Oct 2011 13:44:11 -0500
+
+vyatta-op (0.13.203) unstable; urgency=low
+
+  * Fix ambiguous error text so that it doesn't show node.def, generate
+    the completions using compgen -d
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 11 Oct 2011 10:54:22 -0500
+
+vyatta-op (0.13.202) unstable; urgency=low
+
+  * Bugfix 7543: remove trailing spaces from the show interfaces output
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 10 Oct 2011 12:09:05 -0500
+
+vyatta-op (0.13.201) unstable; urgency=low
+
+  * Fix completions for templates using custom completion functions
+    (currently image tools)
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 07 Oct 2011 13:32:50 -0500
+
+vyatta-op (0.13.200) unstable; urgency=low
+
+  * Bugfix 6747: use bash conditional expressions instead of posix test
+    expressions when doing comparisons. The conditional expressions
+    don't do as much expansion as the test expression does, and are the
+    modern variant
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 06 Oct 2011 16:20:44 -0500
+
+vyatta-op (0.13.199) unstable; urgency=low
+
+  * Make operational mode completion when the user enters an unknown
+    prefix on a tag node consistent with configuration mode
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 06 Oct 2011 10:52:08 -0500
+
+vyatta-op (0.13.198) unstable; urgency=low
+
+  * fix help text printing when the command is runnable
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 06 Oct 2011 01:01:57 -0500
+
+vyatta-op (0.13.197) unstable; urgency=low
+
+  * Fix: first word completions; empty completions on tag nodes, if
+    there is a tag node there should always be at least a non-comp so
+    that the help text will be displayed; invalid completions in the
+    middle of the string
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 06 Oct 2011 00:36:32 -0500
+
+vyatta-op (0.13.196) unstable; urgency=low
+
+  * fix stuck completion on non-lastword
+
+ -- John Southworth <john.southworth@vyatta.com>  Wed, 05 Oct 2011 17:54:43 -0500
+
+vyatta-op (0.13.195) unstable; urgency=low
+
+  * Make non-lastword completions more fluid by using the current prefix
+    and word provided by bash
+
+ -- John Southworth <john.southworth@vyatta.com>  Wed, 05 Oct 2011 16:14:42 -0500
+
+vyatta-op (0.13.194) unstable; urgency=low
+
+  * Fix a bug in op mode handling of non sticking completions, we want
+    the help text if the current completion is empty for consistency
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 04 Oct 2011 15:42:20 -0500
+
+vyatta-op (0.13.193) unstable; urgency=low
+
+  * Alert users when they have entered a completion that doesn't match.
+  * Fix top level completions when there are already words on the line
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 04 Oct 2011 11:14:51 -0500
+
+vyatta-op (0.13.192) unstable; urgency=low
+
+  * Make completion properly handle non-last-word completions
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 03 Oct 2011 13:18:38 -0500
+
+vyatta-op (0.13.191) unstable; urgency=low
+
+  * Make completions not get stuck when backspacing over a character in
+    the last word, so the only compreply now contains the current word
+    but is not equal to the current word
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 03 Oct 2011 11:16:39 -0500
+
+vyatta-op (0.13.190) unstable; urgency=low
+
+  * Stop completions from getting stuck on nodes when backspacing to
+    them
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 30 Sep 2011 19:03:58 -0500
+
+vyatta-op (0.13.189) unstable; urgency=low
+
+  * Fix output of invalid and ambiguous error messages
+  * Always attempt to set the node path, this gives us a chance to fail
+    on invalid or ambiguous commands with out waiting for the user to
+    hit tab twice
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 30 Sep 2011 17:58:34 -0500
+
+vyatta-op (0.13.188) unstable; urgency=low
+
+  * Fix problem with recovering from invalid completion
+  * Add some useful debugging to the comps script, it can be enabled on
+    the fly via an environment variable
+  * Fix typo in previous commit
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 30 Sep 2011 17:10:20 -0500
+
+vyatta-op (0.13.187) unstable; urgency=low
+
+  * fix handleing of invalid commands when there is an the parent node
+    is runnable
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 30 Sep 2011 14:21:04 -0500
+
+vyatta-op (0.13.186) unstable; urgency=low
+
+  * If there are no completions then always show the non-completions,
+    this gets rid of the empty tab completions
+  * Inform users of invalid or ambiguous commands at completion time
+  * Reformat vyatta-op script, there were two indentation styles,
+    changed from tabs to spaces
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 30 Sep 2011 12:50:28 -0500
+
+vyatta-op (0.13.185) unstable; urgency=low
+
+  * Bugfix 7502: Fix "show system image" on xen images built by virt-
+    munger.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Mon, 26 Sep 2011 15:04:01 -0700
+
+vyatta-op (0.13.184) unstable; urgency=low
+
+  * Bugfix 7502: Make "delete system image" work correctly on Xen
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Fri, 21 Oct 2011 15:09:33 -0700
+
+vyatta-op (0.13.183) unstable; urgency=low
+
+  * Bugfix 7502: Get "set system image default-boot" to work on Xen.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Wed, 19 Oct 2011 17:54:56 -0700
+
+vyatta-op (0.13.182) unstable; urgency=low
+
+  * Bugfix 7502: Make "rename system image" work correctly on Xen.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Wed, 19 Oct 2011 17:14:42 -0700
+
+vyatta-op (0.13.181) unstable; urgency=low
+
+  * Bugfix 7502: Correctly display image names on Xen.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Wed, 19 Oct 2011 16:56:11 -0700
+
+vyatta-op (0.13.180) unstable; urgency=low
+
+  * Changed openvpn show command syntax.
+
+ -- Deepti Kulkarni <deepti@vyatta.com>  Mon, 19 Sep 2011 06:42:18 -0700
+
+vyatta-op (0.13.179) unstable; urgency=low
+
+  * Add operational information for ipv6 tunnel interfaces, part of bug
+    6900
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 19 Sep 2011 13:24:22 -0500
+
+vyatta-op (0.13.178) unstable; urgency=low
+
+  * Fix some problems with the completion scripts
+
+ -- John Southworth <john.southworth@vyatta.com>  Wed, 07 Sep 2011 13:31:42 -0500
+
+vyatta-op (0.13.177) unstable; urgency=low
+
+  * Fix completion for user wildcards
+
+ -- John Southworth <john.southworth@vyatta.com>  Wed, 31 Aug 2011 12:39:29 -0500
+
+vyatta-op (0.13.176) unstable; urgency=low
+
+  * Only generate directory names for path expansions, node.def is never
+    a valid completion unless part of a filename which is handled
+    differently
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 30 Aug 2011 18:28:12 -0500
+
+vyatta-op (0.13.175) unstable; urgency=low
+
+  * Fix user defined wildcards such as in 'clear ip bgp *' and fix an
+    error message to be consistent
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 30 Aug 2011 18:00:24 -0500
+
+vyatta-op (0.13.174) unstable; urgency=low
+
+  * Bugfix 7442: Check if running interactively before doing binding
+    options
+
+ -- John Southworth <john.southworth@vyatta.com>  Wed, 17 Aug 2011 16:20:39 -0500
+
+vyatta-op (0.13.173) unstable; urgency=low
+
+  * Silence another keybinding error when running from config mode
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 09 Aug 2011 18:31:46 -0500
+
+vyatta-op (0.13.172) unstable; urgency=low
+
+  *  Ignore ip6tunl0 anchor interface
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 09 Aug 2011 18:29:14 -0500
+
+vyatta-op (0.13.171) unstable; urgency=low
+
+  * Add handler for top level unprivledged command expansion in node
+    conversion function
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 08 Aug 2011 14:19:52 -0500
+
+vyatta-op (0.13.170) unstable; urgency=low
+
+  * Generate unpriviledged allowed-op at compile time. Add script to
+    allow admin user to regenerate it if needed. Fix ambiguous command
+    message.
+
+ -- John Southworth <john.southworth@vyatta.com>  Wed, 03 Aug 2011 12:01:49 -0500
+
+vyatta-op (0.13.169) unstable; urgency=low
+
+  * Fix paging problem with short top level show commmand
+  * Add support for unambiguous top level commands for unpriviledged
+    users
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 02 Aug 2011 19:41:59 -0500
+
+vyatta-op (0.13.168) unstable; urgency=low
+
+  * Reorganize the bash completion and command interpreter scripts into
+    easier to manage chunks. vyatta-op-run no longer exists in
+    /etc/bash_completion.d/ as it is not a completion script it should
+    not be here
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 02 Aug 2011 12:45:48 -0500
+
+vyatta-op (0.13.167) unstable; urgency=low
+
+  * Only show operator users the top level commands they are allowed to
+    execute in tab complete
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 01 Aug 2011 19:00:09 -0500
+
+vyatta-op (0.13.166) unstable; urgency=low
+
+  * Bugfix 2823: Operational mode command interpreter
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 29 Jul 2011 20:42:45 -0700
+
+vyatta-op (0.13.165) unstable; urgency=low
+
+  * Add top level verb "force".
+
+ -- Deepti Kulkarni <deepti@vyatta.com>  Wed, 27 Jul 2011 07:49:16 -0700
+
+vyatta-op (0.13.164) unstable; urgency=low
+
+  * Bugfix 7380: fix pager exceptions regex.
+
+ -- John Southworth <john.southworth@vyatta.com>  Wed, 27 Jul 2011 16:11:58 -0500
+
+vyatta-op (0.13.163) unstable; urgency=low
+
+  * Bugfix 5611: Fix a typo in the shell level check
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 26 Jul 2011 20:22:34 -0700
+
+vyatta-op (0.13.162) unstable; urgency=low
+
+  * Bugfix 5611: Set prompt for operator level users to be similar to
+    other vendors
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 26 Jul 2011 20:15:07 -0700
+
+vyatta-op (0.13.161) unstable; urgency=low
+
+  * Bugfix 7357: change the op mode command wrapper to setup the aliases
+
+ -- John Southworth <john.southworth@vyatta.com>  Wed, 20 Jul 2011 19:28:53 -0500
+
+vyatta-op (0.13.160) unstable; urgency=low
+
+  * Bugfix 6392: Improve display of numeric values for storage usage.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Wed, 17 Aug 2011 16:20:01 -0700
+
+vyatta-op (0.13.159) unstable; urgency=low
+
+  * Bugfix 7327: change the show tech-support help text
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 15 Jul 2011 17:14:44 -0500
+
+vyatta-op (0.13.158) unstable; urgency=low
+
+  * silence warnings when sourcing this script non-interactively
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 12 Jul 2011 16:21:54 -0500
+
+vyatta-op (0.13.157) unstable; urgency=low
+
+  * Fix history time format so that webgui and cli match
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 11 Jul 2011 13:50:39 -0500
+
+vyatta-op (0.13.156) unstable; urgency=low
+
+  * Bugfix 7266: make 'show history' work with non interactive shells
+    like webgui
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 11 Jul 2011 12:53:16 -0500
+
+vyatta-op (0.13.155) unstable; urgency=low
+
+  * re-release of package due to bad git config
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 11 Jul 2011 12:51:05 -0500
+
+vyatta-op (0.13.154) unstable; urgency=low
+
+  * Bugfix 7304: Bring DHCPv6 client leases script back into the
+    release.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Sun, 07 Aug 2011 15:29:02 -0700
+
+vyatta-op (0.13.153) unstable; urgency=low
+
+  * new branch
+
+ -- Deepti Kulkarni <deepti@vyatta.com>  Thu, 07 Jul 2011 20:58:05 -0700
+
+vyatta-op (0.13.152) unstable; urgency=low
+
+  *  Bugfix 7285: remove coloring of error
+
+ -- John Southworth <john.southworth@vyatta.com>  Wed, 06 Jul 2011 16:08:23 -0500
+
+vyatta-op (0.13.151) unstable; urgency=low
+
+  * Bugfix 7283: make ntp.vyatta.com have a new line
+
+ -- John Southworth <john.southworth@vyatta.com>  Wed, 06 Jul 2011 14:13:53 -0500
+
+vyatta-op (0.13.150) unstable; urgency=low
+
+  * bug fix to improve "generate tech-support archive" help text.
+
+ -- Deepti Kulkarni <deepti@vyatta.com>  Tue, 05 Jul 2011 07:37:43 -0700
+
+vyatta-op (0.13.149) unstable; urgency=low
+
+  * Clean up clone warning message
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 05 Jul 2011 12:16:58 -0500
+
+vyatta-op (0.13.148) unstable; urgency=low
+
+  * Bugfix 7278: Add a 'show log image <image-name> tail' command
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 05 Jul 2011 11:01:53 -0500
+
+vyatta-op (0.13.147) unstable; urgency=low
+
+  * Bugfix 7277: Make clone system config consistent with the other
+    image tools
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 05 Jul 2011 10:48:39 -0500
+
+vyatta-op (0.13.146) unstable; urgency=low
+
+  * Use proper directory for disk-installs. Do completion of directory
+    names only in clone system config since disk installs will have
+    other files in /live/image/boot
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 28 Jun 2011 12:52:00 -0500
+
+vyatta-op (0.13.145) unstable; urgency=low
+
+  * Don't guide disk-install files to /config as it doesn't exist. fix
+    file detection for disk-install
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 28 Jun 2011 12:11:27 -0500
+
+vyatta-op (0.13.144) unstable; urgency=low
+
+  * Fix typo in error message in last commit
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 28 Jun 2011 11:35:34 -0500
+
+vyatta-op (0.13.143) unstable; urgency=low
+
+  * Add a disk-install uri for old disk based installs in image tools
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 28 Jun 2011 11:33:01 -0500
+
+vyatta-op (0.13.142) unstable; urgency=low
+
+  * fix typo in show interfaces legend
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 27 Jun 2011 16:50:20 -0500
+
+vyatta-op (0.13.141) unstable; urgency=low
+
+  * Make interface states more readable by using capital letters; fix
+    bug in description output when there isn't an ip assigned
+  * Adjust spacing on Interface column
+  * make the 'u' for up lowercase so that it will draw the users
+    attention to interfaces that are down.
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 23 Jun 2011 19:56:41 -0500
+
+vyatta-op (0.13.140) unstable; urgency=low
+
+  * add .txt extension to the 'show tech-support brief save' output
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 20 Jun 2011 17:19:19 -0700
+
+vyatta-op (0.13.139) unstable; urgency=low
+
+  * fix path for 'show tech-support brief save'
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 20 Jun 2011 17:04:08 -0700
+
+vyatta-op (0.13.138) unstable; urgency=low
+
+  * Bugfix 6800:  Allow non-vyatta menu entries in grub.cfg.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Sun, 17 Jul 2011 16:44:53 -0700
+
+vyatta-op (0.13.137) unstable; urgency=low
+
+  * Bugfix 7124: make 'show tech-support save' have a .txt at the end of
+    the file name. Make the script show the proper config path
+    '/config/support' instead of '/opt/vyatta/etc/config/support'
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 16 Jun 2011 19:28:20 -0500
+
+vyatta-op (0.13.136) unstable; urgency=low
+
+  * Display image type and hypervisor in show version
+  * Add dependency on vyatta-cfg-system
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Thu, 16 Jun 2011 18:00:17 -0400
+
+vyatta-op (0.13.135) unstable; urgency=low
+
+  * Bugfix 5856:  Allow credentials on "add system image" command line
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Thu, 14 Jul 2011 10:46:19 -0700
+
+vyatta-op (0.13.134) unstable; urgency=low
+
+  * Fix completion for image log files
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 10 Jun 2011 12:01:48 -0700
+
+vyatta-op (0.13.133) unstable; urgency=low
+
+  * Fix clone so that it fails if a user attempts to clone to running://
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 09 Jun 2011 17:58:54 -0500
+
+vyatta-op (0.13.132) unstable; urgency=low
+
+  * Bugfix 5840: Change show interfaces so that ipv6 addresses and/or
+    long descriptions don't break formatting
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 03 Jun 2011 22:16:52 -0700
+
+vyatta-op (0.13.131) unstable; urgency=low
+
+  * suppress errors when reading pkg file.
+
+ -- Michael Larson <mike@vyatta.com>  Thu, 02 Jun 2011 11:58:57 -0700
+
+vyatta-op (0.13.130) unstable; urgency=low
+
+  * Bugfix 7101: Should have been the 6th argument not the 5thfor the
+    log file
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 27 May 2011 11:31:15 -0700
+
+vyatta-op (0.13.129) unstable; urgency=low
+
+  * Bugfix: 7091 make clone restore old config directory if it fails
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 27 May 2011 11:27:05 -0700
+
+vyatta-op (0.13.128) unstable; urgency=low
+
+  * only attempt to move the old /config dir if it exists when cloning a
+    configuration
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 20 May 2011 18:09:05 -0500
+
+vyatta-op (0.13.127) unstable; urgency=low
+
+  * Move the clone system template to vyatta-op so that the node.defs
+    are available in the communtiy version. Note this still excludes
+    clone system image from being in community
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 13 May 2011 15:19:27 -0500
+
+vyatta-op (0.13.126) unstable; urgency=low
+
+  * Only show directories in top level completion because installed
+    systems have more in their /boot directories
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 13 May 2011 11:52:55 -0500
+
+vyatta-op (0.13.125) unstable; urgency=low
+
+  * Exclude white-out files from copy. Backup current config dir before
+    clone
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 12 May 2011 19:17:12 -0500
+
+vyatta-op (0.13.124) unstable; urgency=low
+
+  * bug fix - 6592: Include Quagga config in show tech-support output.
+
+ -- Deepti Kulkarni <deepti@vyatta.com>  Fri, 06 May 2011 16:36:42 -0700
+
+vyatta-op (0.13.123) unstable; urgency=low
+
+  * Bugfix 7059 These commands weren't specified in the bug but they
+    needed the same check
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 06 May 2011 13:34:06 -0500
+
+vyatta-op (0.13.122) unstable; urgency=low
+
+  * Bugfix: 7059 Make it such that show file prints a proper error when
+    run as an operator user.
+
+ -- John Southworth <john.southworth@vyatta.com>  Fri, 06 May 2011 13:27:55 -0500
+
+vyatta-op (0.13.121) unstable; urgency=low
+
+  * suppress shutdown confirmation query if invoked by rest API.
+
+ -- Michael Larson <mike@vyatta.com>  Thu, 05 May 2011 10:34:56 -0700
+
+vyatta-op (0.13.120) unstable; urgency=low
+
+  * allow "clear connection-tracking" op mode command to override query
+    for rest mode.
+
+ -- Michael Larson <mike@vyatta.com>  Wed, 04 May 2011 16:10:11 -0700
+
+vyatta-op (0.13.119) unstable; urgency=low
+
+  * allow "reboot at" and "reboot" to be invoked by the rest api.
+
+ -- Michael Larson <mike@vyatta.com>  Wed, 04 May 2011 14:07:39 -0700
+
+vyatta-op (0.13.118) unstable; urgency=low
+
+  * Fail on invalid image name
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 03 May 2011 19:05:22 -0500
+
+vyatta-op (0.13.117) unstable; urgency=low
+
+  * Support non-interactive mode for webgui2
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 03 May 2011 17:25:04 -0500
+
+vyatta-op (0.13.116) unstable; urgency=low
+
+  * Add back default case for copy, removed too many lines on last
+    commit
+  * Add http as a url mode users can copy from
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 03 May 2011 15:19:39 -0500
+
+vyatta-op (0.13.115) unstable; urgency=low
+
+  * Change behavior of image tools as per discussion in design meeting
+
+ -- John Southworth <john.southworth@vyatta.com>  Tue, 03 May 2011 12:53:05 -0500
+
+vyatta-op (0.13.114) unstable; urgency=low
+
+  * Fix accidental merge of show interfaces script, reverting to
+    previous behavior
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 28 Apr 2011 17:32:48 -0500
+
+vyatta-op (0.13.113) unstable; urgency=low
+
+  * rename 'files' to 'file' in templates for image-tools
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 28 Apr 2011 16:40:28 -0500
+
+vyatta-op (0.13.112) unstable; urgency=low
+
+  * verify the users intention when deleting directories since we don't
+    have a glob
+
+ -- John Southworth <john.southworth@vyatta.com>  Thu, 28 Apr 2011 10:42:16 -0500
+
+vyatta-op (0.13.111) unstable; urgency=low
+
+  * Add options when copying a directory to another directory
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 25 Apr 2011 18:55:04 -0500
+
+vyatta-op (0.13.110) unstable; urgency=low
+
+  * Support saving to and from URLs in image tools
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 25 Apr 2011 14:03:10 -0500
+
+vyatta-op (0.13.109) unstable; urgency=low
+
+  * I had the wrong URL for this repo and the previous release added a
+    tag. Rereleasing to proper URL
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 25 Apr 2011 11:20:30 -0500
+
+vyatta-op (0.13.108) unstable; urgency=low
+
+  * Clean up 'show interfaces' a bit.
+  * Cleanup spacing
+  * Check the validity of the filename passed to the image-tools script
+
+ -- John Southworth <john.southworth@vyatta.com>  Mon, 25 Apr 2011 11:18:25 -0500
+
+vyatta-op (0.13.107) unstable; urgency=low
+
+  * Add the ability to read a packet capture file in a useable format
+
+ -- John Southworth <john.southworth@vyatta.com>  Sun, 24 Apr 2011 16:42:32 -0700
+
+vyatta-op (0.13.106) unstable; urgency=low
+
+  * Initial addition of image op mode tools
+
+ -- John Southworth <john.southworth@vyatta.com>  Sat, 23 Apr 2011 12:49:17 -0700
+
+vyatta-op (0.13.105) unstable; urgency=low
+
+  * Adding top level "reset".
+
+ -- Deepti Kulkarni <deepti@vyatta.com>  Tue, 05 Apr 2011 10:34:21 -0700
+
+vyatta-op (0.13.104) unstable; urgency=low
+
+  * Add command to show domain name
+  * Add new command to show IP multicast groups
+  * Split Ipv4/Ipv6 multicast groups
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Thu, 31 Mar 2011 15:55:23 -0700
+
+vyatta-op (0.13.103) unstable; urgency=low
+
+  [ An-Cheng Huang ]
+  * don't use conffiles (not the vyatta way)
+  * correctly handle renamed file
+
+  [ Stephen Hemminger ]
+  * Add simplified 'show hardware cpu'
+  * Use lscpu in show tech support
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Tue, 01 Mar 2011 11:25:30 -0800
+
+vyatta-op (0.13.102) unstable; urgency=low
+
+  * fix for bug 6476.
+
+ -- Michael Larson <mike@vyatta.com>  Mon, 17 Jan 2011 16:27:41 -0800
+
+vyatta-op (0.13.101) unstable; urgency=low
+
+  * new branch
+
+ -- An-Cheng Huang <ancheng@vyatta.com>  Tue, 28 Dec 2010 13:50:22 -0800
+
+vyatta-op (0.13.100) unstable; urgency=low
+
+  * provide default filename completion
+
+ -- An-Cheng Huang <ancheng@vyatta.com>  Tue, 21 Dec 2010 11:28:22 -0800
+
+vyatta-op (0.13.99) unstable; urgency=low
+
+  * Add show system memory detail
+  * Add more options to show system processes
+  * Add show system memory cache
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Tue, 07 Dec 2010 11:10:11 -0800
+
+vyatta-op (0.13.98) unstable; urgency=low
+
+  * Add default command completion
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Wed, 01 Dec 2010 09:09:16 -0800
+
+vyatta-op (0.13.97) unstable; urgency=low
+
+  * Use new bash completion for empty command
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Tue, 30 Nov 2010 20:46:17 -0800
+
+vyatta-op (0.13.96) unstable; urgency=low
+
+  * Rename 10vyatta-op to vyatta-op
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Wed, 24 Nov 2010 10:49:31 -0800
+
+vyatta-op (0.13.95) unstable; urgency=low
+
+  * Bugfix 6101: Add syslog record when a system image is re-named.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Sun, 21 Nov 2010 05:12:56 -0800
+
+vyatta-op (0.13.94) unstable; urgency=low
+
+  * Bugfix 6101: Add logging for system image change and delete.
+  * Allow admin users to disconnect PPP links.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Sun, 21 Nov 2010 02:48:16 -0800
+
+vyatta-op (0.13.93) unstable; urgency=low
+
+  [ Stephen Hemminger ]
+  * Use lesspipe to display gzip files
+
+  [ Stig Thormodsrud ]
+  * Fix 6353: ENH: Rename "show configuration cmds"
+
+ -- Stig Thormodsrud <stig@vyatta.com>  Mon, 22 Nov 2010 11:35:05 -0800
+
+vyatta-op (0.13.92) unstable; urgency=low
+
+  [ Stephen Hemminger ]
+  * remove deprecated linda override
+
+  [ Deepti Kulkarni ]
+  * bug fix for 6192 - enhancement to add "iptables-save" to "show
+
+ -- Deepti Kulkarni <deepti@vyatta.com>  Tue, 16 Nov 2010 20:10:28 +0000
+
+vyatta-op (0.13.91) unstable; urgency=low
+
+  [ Stephen Hemminger ]
+  * Change pci id parsing
+
+  [ An-Cheng Huang ]
+  * match pre-mendocino "show configuration"
+
+ -- An-Cheng Huang <ancheng@vyatta.com>  Wed, 10 Nov 2010 11:43:21 -0800
+
+vyatta-op (0.13.90) unstable; urgency=low
+
+  * Add commands to show if-mib mappings for interface
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Tue, 09 Nov 2010 18:40:56 -0800
+
+vyatta-op (0.13.89) unstable; urgency=low
+
+  * Fix path to ethtool
+  * Fix lookup of community string
+  * Enhance show snmp command
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Tue, 09 Nov 2010 16:27:02 -0800
+
+vyatta-op (0.13.88) unstable; urgency=low
+
+  [ Daniil Baturin ]
+  * Fixed yesno error messages when run with no "-y" argument and with
+    empty prompt.
+
+  [ Stig Thormodsrud ]
+
+ -- Stig Thormodsrud <stig@vyatta.com>  Fri, 05 Nov 2010 14:03:43 -0700
+
+vyatta-op (0.13.87) unstable; urgency=low
+
+  [ Stephen Hemminger ]
+  * Fix message spelling
+
+  [ An-Cheng Huang ]
+  * fix for bug 6194
+
+ -- An-Cheng Huang <ancheng@vyatta.com>  Tue, 14 Sep 2010 13:33:47 -0700
+
+vyatta-op (0.13.86) unstable; urgency=low
+
+  * UNRELEASED
+
+ -- An-Cheng Huang <ancheng@vyatta.com>  Thu, 02 Sep 2010 18:29:45 -0700
+
+vyatta-op (0.13.85) unstable; urgency=low
+
+  * switch "show configuration" to use new config output implementation.
+
+ -- An-Cheng Huang <ancheng@vyatta.com>  Thu, 26 Aug 2010 16:47:14 -0700
+
+vyatta-op (0.13.84) unstable; urgency=low
+
+  [ Deepti Kulkarni ]
+  * Adding 'generate tech-support archive'command
+  * Added /home to the archive.
+  * Allow non-root user extract root's bash history. Added "sudo".
+
+  [ An-Cheng Huang ]
+  * change tech-support to use shell API directly
+
+ -- An-Cheng Huang <ancheng@vyatta.com>  Wed, 18 Aug 2010 12:02:59 -0700
+
+vyatta-op (0.13.83) unstable; urgency=low
+
+  * fix typo in tech-support script
+  * remove low-level config dir usage
+
+ -- An-Cheng Huang <ancheng@vyatta.com>  Mon, 16 Aug 2010 17:02:26 -0700
+
+vyatta-op (0.13.82) unstable; urgency=low
+
+  * new API changes
+
+ -- An-Cheng Huang <ancheng@vyatta.com>  Fri, 30 Jul 2010 16:42:57 -0700
+
+vyatta-op (0.13.81) unstable; urgency=low
+
+  * UNRELEASED
+
+ -- An-Cheng Huang <ancheng@vyatta.com>  Thu, 22 Jul 2010 17:25:38 -0700
+
+vyatta-op (0.13.80) unstable; urgency=low
+
+  * part of fix for BZ 5839 - move clear process cmds under restart
+
+ -- Mohit Mehta <mohit.mehta@vyatta.com>  Tue, 20 Jul 2010 14:21:19 -0700
+
+vyatta-op (0.13.79) unstable; urgency=low
+
+  * Remove duplicate templates
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Fri, 09 Jul 2010 17:51:33 -0700
+
+vyatta-op (0.13.78) unstable; urgency=low
+
+  * Add clear interfaces wireless
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Fri, 09 Jul 2010 17:25:01 -0700
+
+vyatta-op (0.13.77) unstable; urgency=low
+
+  * hide conntrack messages
+
+ -- Mohit Mehta <mohit.mehta@vyatta.com>  Fri, 09 Jul 2010 13:35:04 -0700
+
+vyatta-op (0.13.76) unstable; urgency=low
+
+  * Display supplemental groups
+
+ -- Stephen Hemminger <shemminger@lenny.localdomain>  Thu, 08 Jul 2010 12:57:36 -0700
+
+vyatta-op (0.13.75) unstable; urgency=low
+
+  * Add show login commands
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Tue, 06 Jul 2010 22:04:08 -0700
+
+vyatta-op (0.13.74) unstable; urgency=low
+
+  * Added 'show system image' commands to 'show tech-support'.
+
+ -- Deepti Kulkarni <deepti@vyatta.com>  Tue, 06 Jul 2010 23:27:11 +0000
+
+vyatta-op (0.13.73) unstable; urgency=low
+
+  * Changed to save 100 log files instead of 10.
+
+ -- Deepti Kulkarni <deepti@vyatta.com>  Tue, 06 Jul 2010 16:37:56 +0000
+
+vyatta-op (0.13.72) unstable; urgency=low
+
+  * Added new command to print PCI device information.
+  * Revert "Added new command to print PCI device information."
+  * Blocked user operator from using show tech-support.
+
+ -- Deepti Kulkarni <deepti@vyatta.com>  Mon, 28 Jun 2010 20:31:48 +0000
+
+vyatta-op (0.13.71) unstable; urgency=low
+
+  * Changes to read policy and vrrp configuration for show tech-support.
+
+ -- Deepti Kulkarni <deepti@vyatta.com>  Wed, 16 Jun 2010 23:41:21 +0000
+
+vyatta-op (0.13.70) unstable; urgency=low
+
+  * Fix 5497: display entire interface description in the operational
+    command output
+
+ -- Stig Thormodsrud <stig@vyatta.com>  Sat, 12 Jun 2010 11:03:19 -0700
+
+vyatta-op (0.13.69) unstable; urgency=low
+
+  * Block operator user from running "show configuration *"
+
+ -- Stig Thormodsrud <stig@vyatta.com>  Fri, 11 Jun 2010 11:07:05 -0700
+
+vyatta-op (0.13.68) unstable; urgency=low
+
+  * Allow admin user to run "show system image storage" command.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Sun, 30 May 2010 06:42:20 -0700
+
+vyatta-op (0.13.67) unstable; urgency=low
+
+  * Show tech-support Larkspur enhancements.
+
+ -- Deepti Kulkarni <deepti@vyatta.com>  Fri, 04 Jun 2010 18:37:17 +0000
+
+vyatta-op (0.13.66) unstable; urgency=low
+
+  * Add cli for vyatta-config-gen-sets.pl
+
+ -- Stig Thormodsrud <stig@vyatta.com>  Fri, 28 May 2010 17:43:49 -0700
+
+vyatta-op (0.13.65) unstable; urgency=low
+
+  * Move DHCPv6 client op-mode commands to this package.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Wed, 26 May 2010 16:35:33 -0700
+
+vyatta-op (0.13.64) unstable; urgency=low
+
+  * Don't allow the currently running image to be renamed.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Thu, 20 May 2010 10:47:05 -0700
+
+vyatta-op (0.13.63) unstable; urgency=low
+
+  * UNRELEASED
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Fri, 30 Apr 2010 17:51:27 -0700
+
+vyatta-op (0.13.62) unstable; urgency=low
+
+  * Add "show system image storage" op mode command.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Fri, 30 Apr 2010 17:50:24 -0700
+
+vyatta-op (0.13.61) unstable; urgency=low
+
+  * Added an op-mode command to rename a system image.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Fri, 30 Apr 2010 15:54:37 -0700
+
+vyatta-op (0.13.60) unstable; urgency=low
+
+  * Bugfix 5549: Use proper prompt string when deleting image.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Mon, 26 Apr 2010 12:26:53 -0700
+
+vyatta-op (0.13.59) unstable; urgency=low
+
+  * Add Input Functional Block device support
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Thu, 15 Apr 2010 13:53:22 -0700
+
+vyatta-op (0.13.58) unstable; urgency=low
+
+  * Use new interface_description function
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Mon, 29 Mar 2010 16:15:45 -0700
+
+vyatta-op (0.13.57) unstable; urgency=low
+
+  * Remove old vtysh alias
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Fri, 19 Mar 2010 17:31:44 -0700
+
+vyatta-op (0.13.56) unstable; urgency=low
+
+  * Add "reboot now" to prevent confirmation prompt.
+
+ -- Stig Thormodsrud <stig@vyatta.com>  Tue, 16 Mar 2010 20:20:39 -0700
+
+vyatta-op (0.13.55) unstable; urgency=low
+
+  * Don't give error if /var/run/vyatta doesn't exist  yet
+  * Add clear interfaces bonding
+  * Add clear interfaces pseudo-ethernet
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Mon, 15 Mar 2010 10:28:46 -0700
+
+vyatta-op (0.13.54) unstable; urgency=low
+
+  * Depends on recent version of quagga
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Mon, 08 Mar 2010 16:48:32 -0800
+
+vyatta-op (0.13.53) unstable; urgency=low
+
+  * Change vyatta-vtysh to vtysh
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Mon, 08 Mar 2010 16:34:53 -0800
+
+vyatta-op (0.13.52) unstable; urgency=low
+
+  * Bugfix 5394: Move colon characters to their proper locations.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Thu, 04 Mar 2010 16:37:51 -0800
+
+vyatta-op (0.13.51) unstable; urgency=low
+
+  * Bugfix 5404: Handle RAID resynchronization on image-installed
+    systems.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Wed, 03 Mar 2010 18:11:12 -0800
+
+vyatta-op (0.13.50) unstable; urgency=low
+
+  * UNRELEASED
+
+ -- An-Cheng Huang <ancheng@vyatta.com>  Wed, 17 Feb 2010 16:15:49 -0800
+
+vyatta-op (0.13.49) unstable; urgency=low
+
+  * Fix bug 4115 'clear nat translations' does not clear nat
+    translations
+  * clear expect table as well
+
+ -- Mohit Mehta <mohit.mehta@vyatta.com>  Wed, 03 Feb 2010 18:26:56 -0800
+
+vyatta-op (0.13.48) unstable; urgency=low
+
+  * Bugfix 2539:  Validate input when user specifies image name.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Tue, 02 Feb 2010 12:07:37 -0800
+
+vyatta-op (0.13.47) unstable; urgency=low
+
+  * Merge branch 'kenwood' of 192.168.100.1:git/vyatta-op into kenwood
+  * Fix completion string
+  * Ignore subst vars file
+  * Fix allowed strings for hostname/ipaddress
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Tue, 02 Feb 2010 10:46:07 -0800
+
+vyatta-op (0.13.46) unstable; urgency=low
+
+  * Expand all possible interfaces with leases for renew
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Thu, 28 Jan 2010 17:21:45 -0800
+
+vyatta-op (0.13.45) unstable; urgency=low
+
+  * Bugfix 5238: Prevent the running image from being deleted
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Mon, 25 Jan 2010 15:49:00 -0800
+
+vyatta-op (0.13.44) unstable; urgency=low
+
+  * Re-factor image installation commands.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Mon, 25 Jan 2010 11:36:48 -0800
+
+vyatta-op (0.13.43) unstable; urgency=low
+
+  * Remove system accounting
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Thu, 21 Jan 2010 18:17:12 -0800
+
+vyatta-op (0.13.42) unstable; urgency=low
+
+  * Add accounting per user
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Thu, 21 Jan 2010 13:47:01 -0800
+
+vyatta-op (0.13.41) unstable; urgency=low
+
+  * Add image name completion for two system image commands.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Mon, 11 Jan 2010 17:07:51 -0800
+
+vyatta-op (0.13.40) unstable; urgency=low
+
+  * Change operational mode commands to match those in design document.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Fri, 08 Jan 2010 17:41:23 -0800
+
+vyatta-op (0.13.39) unstable; urgency=low
+
+  * Handle various conditions and cleanup.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Wed, 06 Jan 2010 11:50:32 -0800
+
+vyatta-op (0.13.38) unstable; urgency=low
+
+  * Show interfaces no longer uses Vyatta::Config
+  * Simple SNMP operational command
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Wed, 06 Jan 2010 08:30:17 -0800
+
+vyatta-op (0.13.37) unstable; urgency=low
+
+  * Allow deletion of disk-based non-image installation.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Tue, 05 Jan 2010 14:59:33 -0800
+
+vyatta-op (0.13.36) unstable; urgency=low
+
+  * Don't allow operator to run show system login users
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Mon, 04 Jan 2010 16:51:26 -0800
+
+vyatta-op (0.13.35) unstable; urgency=low
+
+  * Indicate when system was booted via image.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Mon, 04 Jan 2010 14:29:13 -0800
+
+vyatta-op (0.13.34) unstable; urgency=low
+
+  * Fix typo in show dhcp client lease script
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Fri, 25 Dec 2009 15:22:26 -0800
+
+vyatta-op (0.13.33) unstable; urgency=low
+
+  * Add help text for install-image URL mode.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Wed, 23 Dec 2009 16:39:19 -0800
+
+vyatta-op (0.13.32) unstable; urgency=low
+
+  * Fix deletion of image from disk-based image.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Wed, 23 Dec 2009 11:22:40 -0800
+
+vyatta-op (0.13.31) unstable; urgency=low
+
+  * Allow displaying and switching to disk-based installations.
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Wed, 23 Dec 2009 10:55:49 -0800
+
+vyatta-op (0.13.30) unstable; urgency=low
+
+  * Use perl to scan directory
+  * Get rid of dead code.
+  * Use perl to read resolv.conf
+  * Rearrange code for clarity
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Tue, 22 Dec 2009 14:46:28 -0800
+
+vyatta-op (0.13.29) unstable; urgency=low
+
+  * Add display of accounting information
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Fri, 18 Dec 2009 16:27:24 -0800
+
+vyatta-op (0.13.28) unstable; urgency=low
+
+  * Use new cleaner command arguments
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Wed, 16 Dec 2009 12:06:35 -0800
+
+vyatta-op (0.13.27) unstable; urgency=low
+
+  * add op command for image removal
+
+ -- An-Cheng Huang <ancheng@vyatta.com>  Wed, 11 Nov 2009 18:19:24 -0800
+
+vyatta-op (0.13.26) unstable; urgency=low
+
+  * Prevent problems on upgrade for files moved from vyatta-serial to
+    this package
+
+ -- Mohit Mehta <mohit.mehta@vyatta.com>  Mon, 09 Nov 2009 16:06:49 -0800
+
+vyatta-op (0.13.25) unstable; urgency=low
+
+  * move generic interface op commands to vyatta-op
+
+ -- An-Cheng Huang <ancheng@vyatta.com>  Mon, 09 Nov 2009 11:51:05 -0800
+
+vyatta-op (0.13.24) unstable; urgency=low
+
+  * add .merge-branch-exclude
+  * add install-image op commands
+  * add op commands for installed images
+
+ -- An-Cheng Huang <ancheng@vyatta.com>  Wed, 04 Nov 2009 15:32:46 -0800
+
+vyatta-op (0.13.23) unstable; urgency=low
+
+  * Decolorize show system login users
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Mon, 14 Sep 2009 17:17:04 -0700
+
+vyatta-op (0.13.22) unstable; urgency=low
+
+  * Add show system login users
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Fri, 11 Sep 2009 23:19:12 -0700
+
+vyatta-op (0.13.21) unstable; urgency=low
+
+  [ Stephen Hemminger ]
+  * remove unwanted allowed tag
+
+  [ slioch ]
+  * now supports quoted values for op mode commands
+
+ -- slioch <slioch@eng-140.vyatta.com>  Thu, 03 Sep 2009 11:03:41 -0700
+
+vyatta-op (0.13.20) unstable; urgency=low
+
+  [ Stig Thormodsrud ]
+  * Change vyatta-op dependency from ssmtp to mail-transport-agent.
+
+  [ Stephen Hemminger ]
+  * Add 'show interfaces pseudo-ethernet'
+  * Fix completion for VIF
+  * Ignore ntp.conf server options
+  * Add ethtool output to show tech-support
+  * Remove show tech-support bug related to interfaces
+  * Add operator to show disk format
+  * Fix handling of invalid bonding name
+  * Fix error message from show bonding
+  * Cleanup show bonding script
+  * Make bonding operational mode consistent with ethernet
+  * Remove pseudo-ethernet vif templates
+  * Add missing template for 'show interfaces bonding bondX'
+  * Remove bogus statistics template
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Wed, 12 Aug 2009 22:06:40 -0700
+
+vyatta-op (0.13.19) unstable; urgency=low
+
+  * UNRELEASED
+
+ -- An-Cheng Huang <ancheng@vyatta.com>  Fri, 29 May 2009 18:36:59 -0700
+
+vyatta-op (0.13.18) unstable; urgency=low
+
+  * Show more detail about interfaces in show tech-support
+  * Make tech-support show more PCI info
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Thu, 28 May 2009 14:17:44 -0700
+
+vyatta-op (0.13.17) unstable; urgency=low
+
+  [ Conny Brunnkvist ]
+  * Add "show configuration files".
+
+ -- Stig Thormodsrud <stig@vyatta.com>  Mon, 25 May 2009 13:01:09 -0700
+
+vyatta-op (0.13.16) unstable; urgency=low
+
+  * add local env hook
+
+ -- An-Cheng Huang <ancheng@vyatta.com>  Mon, 23 Mar 2009 16:56:44 -0700
+
+vyatta-op (0.13.15) unstable; urgency=low
+
+  * Fix shutdown at to return to prompt
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Thu, 19 Mar 2009 15:38:27 -0700
+
+vyatta-op (0.13.14) unstable; urgency=low
+
+  * Add show shutdown
+  * fix email in changelog
+  * Add dependency on perl libtimedate
+  * Fix formatting of output
+  * Use nohup to avoid extra messages
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Thu, 12 Mar 2009 11:10:53 -0700
+
+vyatta-op (0.13.13) unstable; urgency=low
+
+  * Fix typo in shutdown cancel
+  * Cleanup show disk format
+  * Cleanup show disk format
+  * Fix lsof options in tech-support
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Wed, 11 Mar 2009 17:58:58 -0700
+
+vyatta-op (0.13.12) unstable; urgency=low
+
+  [ Stig Thormodsrud ]
+  * Fix 4183: no auto completion for 'clear vrrp interfaces <> group ?'.
+
+ -- An-Cheng Huang <ancheng@vyatta.com>  Mon, 09 Mar 2009 19:44:29 -0700
+
+vyatta-op (0.13.11) unstable; urgency=low
+
+  * Remove [y] from prompt
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Sun, 08 Mar 2009 14:12:48 -0700
+
+vyatta-op (0.13.10) unstable; urgency=low
+
+  * Fix broken path in 'show arp <intf>'.
+
+ -- Stig Thormodsrud <stig@io.vyatta.com>  Thu, 05 Mar 2009 15:09:17 -0800
+
+vyatta-op (0.13.9) unstable; urgency=low
+
+  * Use new --vif option to find allowed interfaces
+  * Add default option to yesno for shutdown
+  * Fix out of date stuff in README
+  * Fix expansion of bonding VIF
+  * Use show-interface to allow clear on all interface types
+  * Use getInterfaces in vyatta-show-interfaces.pl
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Mon, 02 Mar 2009 17:21:27 -0800
+
+vyatta-op (0.13.8) unstable; urgency=low
+
+  * Fix problems with new show-interfaces.pl
+  * Invalid action should cause usage message
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Wed, 18 Feb 2009 10:19:16 -0800
+
+vyatta-op (0.13.7) unstable; urgency=low
+
+  * Prompt before immediate shutdown
+  * Put delayed shutdown in background to allow for other commands.
+  * Enable strict in cpu summary
+  * Use common Vyatta:: library
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Tue, 17 Feb 2009 17:04:34 -0800
+
+vyatta-op (0.13.6) unstable; urgency=low
+
+  * Change show log directory to use 'if'
+  * Show arp: don't resolve host names
+  * Add show arp eth0
+  * Use vyatta-interfaces --show to display allowed types
+  * Don't resolve hostnames in show tech-support
+  * Use lesspipe to unzip log files
+  * Add shutdown command to CLI
+
+ -- Stephen Hemminger <shemminger@vyatta.com>  Thu, 12 Feb 2009 14:58:54 -0800
+
+vyatta-op (0.13.5) unstable; urgency=low
+
+  [ Mohit Mehta ]
+  * Fix Bug 4120 Extraneous <value> item at top of Operation tree
+
+  [ Stephen Hemminger ]
+  * Add heading to 'show users'
+
+  [ Bob Gilligan ]
+  * Explicitly use the shell builtin "test" command since "test" is now
+    a
+
+ -- Bob Gilligan <gilligan@vyatta.com>  Wed, 11 Feb 2009 09:41:40 -0800
+
+vyatta-op (0.13.4) unstable; urgency=low
+
+  * Fix CPU summary
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Fri, 30 Jan 2009 11:05:18 -0800
+
+vyatta-op (0.13.3) unstable; urgency=low
+
+  * New show system cpu
+  * Move 'show system cpu' to 'show hardware cpu summary'
+  * Change name of cpu summary script and rearrange
+
+ -- Stephen Hemminger <stephen.hemminger@vyatta.com>  Thu, 29 Jan 2009 16:34:26 -0800
+
+vyatta-op (0.13.2) unstable; urgency=low
+
+  [ Justin Fletcher ]
+  * Move tcp and udp commands under system/connections
+
+ -- An-Cheng Huang <ancheng@build-vm.localdomain>  Tue, 13 Jan 2009 18:15:06 -0800
+
+vyatta-op (0.13.1) unstable; urgency=low
+
+  [ Stephen Hemminger ]
+  * Add commands to display open sockets
+  * Need full path to ss command
+
+  [ An-Cheng Huang ]
+  * correct package dependency
+
+  [ Mohit Mehta ]
+  * add bond interfaces to list of allowed interfaces for dhcp
+    release/renew
+
+  [ An-Cheng Huang ]
+  * add support for development build
+
+  [ Mohit Mehta ]
+  * make changes for submodule moved to VyattaMisc
+
+  [ Stephen Hemminger ]
+  * Decode bonding modes
+  * Convert to Vyatta::
+
+  [ Stig Thormodsrud ]
+  * "show interfaces" broken.  Use new perl hierarchy.
+
+  [ Stephen Hemminger ]
+  * Get rid of reference to OFR
+
+  [ Stig Thormodsrud ]
+  * Add option to show counters for multiple interfaces.
+
+  [ An-Cheng Huang ]
+  * update maintainer information
+  * "files" file should be removed before package build
+
+  [ Mohit Mehta ]
+  * Fix Bug 4022 dynamic dns config fails during system boot if
+    interface does not exist
+
+  [ An-Cheng Huang ]
+
+ -- An-Cheng Huang <ancheng@vyatta.com>  Thu, 08 Jan 2009 09:42:49 -0800
+
+vyatta-op (0.13) unstable; urgency=low
+
+	  3.2.0
+  [ Mark O'Brien ]
+
+
+  [ Mohit Mehta ]
+  * add 'ppp interface-name' to output of 'show dns forwarding
+    nameserver'
+  * add wirelessmodem to interface hash to pick up description from CLI
+
+  [ Stephen Hemminger ]
+  * Sort interfaces in bonding operational mode commands
+  * Show correct statistics on slaves
+
+  [ Stig Thormodsrud ]
+  * Rename "show arp6" to "show ipv6 neighbors".
+
+  [ Stephen Hemminger ]
+  * need sudo before ethtool -S
+  * Save/restore command history in configure
+
+  [ Bob Gilligan ]
+  * Bugfix: 3841:  Allow admin level users to run the RAID op mode
+    commands.
+
+  [ Stephen Hemminger ]
+  * fix 'show history N'
+  * Fix references to ethtool
+  * Better format of output
+  * Show command history
+
+  [ Robert Bays ]
+  * move show system usb to vyatta-op
+
+  [ Bob Gilligan ]
+  * Bugfix: 3744
+
+  [ Stephen Hemminger ]
+  * Revert insecure method of displaying configuration
+
+  [ Mohit Mehta ]
+  * Fix Bug 3763 Configuration is not available to operator in "show
+    tech-support"
+  * make sure file has been written to before extracting
+
+  [ Rick Balocca ]
+  * Recognize aufs
+
+  [ Mohit Mehta ]
+  * Fix Bug 3609 "show tech-support" does not display open file
+    information for operator level user
+
+  [ Stig Thormodsrud ]
+  * Fix 2881: "show tech-support" should limit the output of "show ip
+    route"
+
+  [ Bob Gilligan ]
+  * Bugfix: 3333
+  * Bugfix: 1725
+
+  [ Mohit Mehta ]
+  * Fix Bug 3716 - Dynamic DNS status may incorrectly indicate lack of
+    configuration
+
+  [ Stig Thormodsrud ]
+  * Revert "Fix less prompt."
+  * Fix less prompt.
+
+  [ Stephen Hemminger ]
+  * remove debug code
+  * Fix script for bond with no slaves
+  * Show all interfaces
+  * Add preliminary operational mode support for bonding
+  * Add operational mode template for ethtool statistics
+
+  [ Mohit Mehta ]
+  * change op-mode command 'clear dns forwarding statistics' to 'clear
+    dns forwarding all'
+  * add code for op-mode Dynamic DNS commands
+
+  [ Bob Gilligan ]
+  * Add operational mode commands for RAID.
+
+  [ Mohit Mehta ]
+  * change command 'clear dns forwarding process' to 'clear dns
+    forwarding statistics'
+  * allowed values for dhcp release/renew should show bridges as well if
+    configured to use dhcp
+  * add command 'clear dns forwarding process' to restart dnsmasq and
+    clear all statistics
+
+  [ Stig Thormodsrud ]
+  * Fix 3540: ssmtp complaining that it's unable to locate mail
+
+  [ Mohit Mehta ]
+  * better wording for output of 'show dns forwarding nameservers'
+
+  [ Stig Thormodsrud ]
+  * Fix "show interfaces ethernet" after "clear interfaces counters"
+
+  [ Mohit Mehta ]
+  * use active config directory base to get config values from op-mode
+  * code for op-mode command: 'show dns forwarding nameservers'
+  * dns-forwarding op-mode commands:
+  * add 'clear dns forwarding cache' command
+
+  [ Stig Thormodsrud ]
+  * Fix IPv6 help string.
+  * Add some ipv6 op mode commands.
+  * The at package pulls in citadel-mta, use small mta.
+  * Add missing "show reboot".
+  * Enable "reload at|cancel".
+
+  [ An-Cheng Huang ]
+  * add openvpn interfaces to "show interfaces"
+
+  [ Mark O'Brien ]
+
+ -- Mark O'Brien <mobrien@firebolt.vyatta.com>  Tue, 25 Nov 2008 19:10:16 -0800
+
+vyatta-op (0.12) unstable; urgency=low
+
+	  3.1.2
+  [ Mark O'Brien ]
+
+
+  [ Mohit Mehta ]
+  * better detection of whether domain-name set using CLI is overriding
+  * => display text saying the domain-name received from dhcp-server
+
+  [ An-Cheng Huang ]
+  * fix for bug 3451: add messages output
+
+  [ Stephen Hemminger ]
+  * Turn on paging of tail when showing count lines
+  * Show files completion
+
+  [ Mohit Mehta ]
+  * prevents showing backend error to user on traceroute when name-
+    server not set
+  * Fix Bug 2871 Internal errors reported with traceroute
+
+  [ An-Cheng Huang ]
+  * fix for bug 3414: make op mode functions available in config mode.
+
+  [ Mohit Mehta ]
+  * Fix Bug 1059 Feature Request: integrate 'tcpdump' and 'tethereal'
+    into Vyatta CLI
+
+  [ Mark O'Brien ]
+
+ -- Mark O'Brien <mobrien@firebolt.vyatta.com>  Wed, 23 Jul 2008 21:36:10 -0700
+
+vyatta-op (0.11) unstable; urgency=low
+
+	  3.1.1
+  [ Mark O'Brien ]
+
+
+  [ Mohit Mehta ]
+  * Fix Bug 1059 Feature Request: integrate 'tcpdump' and 'tethereal'
+    into Vyatta CLI
+  * Bug 3385 incomplete command 'run' in configure mode produces backend
+    error to user
+  * Fix Bug 3378 user "vyatta" got "permission denied" after executing
+    "renew dhcp ..." and/or "release dhcp ..."
+
+  [ rbalocca ]
+  * Output was sometimes missing important white space
+
+  [ Mohit Mehta ]
+  * added code for allowed values for op-mode dhcp release/renew lease
+    commands
+  * Fix bug 3059 Operator Level commands for DHCP client
+  * deleting op-command 'clear dhcp client process' as its handling
+
+  [ Mark O'Brien ]
+
+ -- Mark O'Brien <mobrien@firebolt.vyatta.com>  Sat, 28 Jun 2008 11:22:25 -0700
+
+vyatta-op (0.10) unstable; urgency=low
+
+	  3.1.0
+  [ Mark O'Brien ]
+
+
+  [ Stephen Hemminger ]
+  * Do chomp in accessor routine for sysfs
+  * add completions for show files
+
+  [ Stig Thormodsrud ]
+  * Add sanity check if getlogin() fails.
+
+  [ Stephen Hemminger ]
+  * Fix use of invalid variable
+
+  [ Stig Thormodsrud ]
+  * Fix 3328: operator can't issue "show vrrp"
+  * Fix 787: Add command to force vrrp state transition to backup.
+  * Fix 88: Feature Request: Reboot Command (add confirmation)
+  * Fix 2705: Add "clear vrrp process" command.
+  * Fix 3155: setting the third vrrp member with the highest priority
+    doesn't change (update) the backup
+
+  [ rbalocca ]
+  * Ignore derived files
+
+  [ Stephen Hemminger ]
+  * Use perl to read sysfs directly
+
+  [ rbalocca ]
+  * Convert to our method of changelog creation
+
+  [ Stig Thormodsrud ]
+  * Fix 3233: dhcp client doesn't work on bridge interface
+
+  [ Bob Gilligan ]
+  * Bugfix: 3228
+  * Bugfix: 2858
+  * Enable display of info about ADSL interfaces.
+
+  [ Mohit Mehta ]
+  * Fix Bug 3069 Help strings should be standardized
+  * Fix Bug 3069 Help strings should be standardized
+  * Fix Bug 3069 Help strings should be standardized
+  * Fix Bug 1059 Feature Request: integrate 'tcpdump' and 'tethereal'
+    into Vyatta CLI
+  * Fix Bug 3069 Help strings should be standardized
+
+  [ Stig Thormodsrud ]
+  * Fix 3062: "Show interfaces" displays interfaces in lexicographic,
+    not numeric, order
+
+  [ Mohit Mehta ]
+  * Fix Bug 2871 Internal errors reported with traceroute
+
+  [ Tom Grennan ]
+  * record selected vtysh (vyatta-quagga vs quagga) in exported shell
+    variable
+  * donot pipe through VYATTA_PAGER if run_cmd begins with LESSOPEN,
+    less, pager, or tail
+  * use less prompt to display the "show" content
+  * fix typo in bug fix 3017
+  * this is an architecture independent package
+  * fix bug 3017
+
+  [ Mohit Mehta ]
+  * Fix Bug 802 VRRP - add "show vrrp summary" command (TC 3.2.5.7.2)
+
+  [ Mark O'Brien ]
+
+ -- Mark O'Brien <mobrien@firebolt.vyatta.com>  Tue, 17 Jun 2008 09:27:18 -0700
+
+vyatta-op (0.9) unstable; urgency=low
+
+  3.0.5
+
+
+ -- Mark O'Brien <mobrien@vyatta.com>  Tue, 06 May 2008 12:43:38 -0700
+
+vyatta-op (0.8) unstable; urgency=low
+
+  3.0.4
+
+
+ -- Mark O'Brien <mobrien@vyatta.com>  Mon, 05 May 2008 16:40:56 -0700
+
+vyatta-op (0.7) unstable; urgency=low
+
+  3.0.3
+  [ Mark O'Brien ]
+
+
+  [ rbalocca ]
+  * Indicate the VC4.0.2 release candidate in the changelog
+
+  [ Mark O'Brien ]
+
+ -- Mark O'Brien <mobrien@vyatta.com>  Tue, 29 Apr 2008 16:42:42 -0700
+
+vyatta-op (0.6) unstable; urgency=low
+
+  VC4.0.2
+
+
+ -- Mark O'Brien <mobrien@vyatta.com>  Sat, 19 Apr 2008 11:56:25 -0700
+
+vyatta-op (0.5) unstable; urgency=low
+
+  VC4.0.2 release candidate
+  [ Mark O'Brien ]
+
+
+  [ Stig Thormodsrud ]
+  * "show bridge brX" doesn't work. Use full path to brctl.
+
+  [ Mark O'Brien ]
+
+ -- Mark O'Brien <mobrien@vyatta.com>  Wed, 16 Apr 2008 09:50:26 -0700
+
+vyatta-op (0.4) unstable; urgency=low
+
+  3.0.2
+  [ Mark O'Brien ]
+
+  * 3.0.1
+
+  [ rbalocca ]
+  * Fix debian dependencies
+  * Line up the colons with the copyright notice (in show version)
+  * Set dependencies on either bash or vyatta-bash
+
+  [ Mark O'Brien ]
+
+ -- Mark O'Brien <mobrien@vyatta.com>  Fri, 04 Apr 2008 18:01:12 -0700
+
+vyatta-op (0.3) unstable; urgency=low
+
+  VC4.0.1
+  [ Mark O'Brien ]
+
+
+  [ An-Cheng Huang ]
+  * * fix for bug 2771: bind space to completion for vbash users.
+  * Revert "* fix for bug 2771: bind space to completion for vbash
+    users."
+  * fix for bug 2911: check log file name
+  * add quoting for inline scripts in templates
+  * show commands don't need sudo
+  * revert sudo removal for "identify" command since the kernel change
+  * partial fix for bug 2771: change default for root and add command
+    for
+
+  [ Bob Gilligan ]
+  * Bugfix: 2879
+
+  [ Christopher LILJENSTOLPE ]
+  * Fix 2965: IPv6 Interface information not shown in show interfaces
+
+  [ Justin Fletcher ]
+  * Follow log file through log rotation
+
+  [ Mohit Mehta ]
+  * Fix Bug 2707 Missing from Glendale
+  * Fix Bug 2707 Missing from Glendale
+  * Fix Bug 2707 Missing from Glendale
+  * Fix Bug 2863 "show bridge" prompts for sudo password
+  * Fix Bug 2707 Missing from Glendale
+
+  [ Stephen Hemminger ]
+  * add command to show end of log file
+  * bridge status commands don't need sudo
+  * no need for sudo to read log messages
+  * use sysfs rather dmidecode to look at hardware information
+  * remove root requirement
+  * Use hardcoded path to ethtool
+  * don't use sudo-users for ip commands
+  * no longer need sudo-users links for commands
+  * tech-support is a shell script
+  * Add show license command
+  * Update license from VPL 1.0 to GPLv2
+  * remove init-floppy
+  * Fix this a different way.
+  * Move init-floppy to /opt/vyatta/sbin
+  * don't run commands in subshell
+  * Need to run commands via eval
+  * Better fix for interrupted shell commands problem.
+
+  [ Stig Thormodsrud ]
+  * Fix operator permissions for "clear arp" and "clear ip route cache".
+  * Fix operator permissions for "clear interface counters" and "clear
+    dhcp client process"
+  * Add quotes to user entered parameters
+  * Add quotes around user input
+
+  [ rbalocca ]
+  * Remove postrm from configure.ac, since it was deleted
+  * Fix syntax error in control file + add a missing dependency: "less"
+
+  [ Mark O'Brien ]
+
+ -- Mark O'Brien <mobrien@vyatta.com>  Tue, 18 Mar 2008 19:05:07 -0700
+
+vyatta-op (0.2) unstable; urgency=low
+
+  vc4.0.0
+  [ Mark O'Brien ]
+
+
+  [ An-Cheng Huang ]
+  * fix for bug 2587: add "identify" command under "show interfaces
+    ethernet".
+  * bind '?' to "possible-completions" for help
+
+  [ Bob Gilligan ]
+  * Teach the vyatta-show-interfaces script about PPPOE interfaces.
+  * Bugfix: 2634
+  * Bugfix: 2712
+
+  [ Mark O'Brien ]
+  * Added "clear console" command to clear screen.
+
+  [ Stephen Hemminger ]
+  * running brctl doesn't need root privledges
+  * no longer need sudo for ethtool
+  * no need for sudo when using ethtool
+  * remove usage of sudo in tech-support script
+  * remove unneeded install steps
+  * Revert "remove unneeded install steps"
+  * Revert "remove usage of sudo in tech-support script"
+  * Revert "no need for sudo when using ethtool"
+  * Revert "no longer need sudo for ethtool"
+  * Revert "running brctl doesn't need root privledges"
+
+  [ Stig Thormodsrud ]
+  * add 'show dhcp client leases'
+  * fix 'show vrrp interface <>'
+  * - Add "show ip route forward"
+  * Change 'show dhcp client' to 'show dhcp client leases'
+  * Add 'clear arp <address|interface>' bug 2702
+  * Fix 2710: Missing hardware commands
+  * - Fix bug 776: need "clear interface" command to clear counters
+  * Add "clear dhcp client process".
+  * Fix "show dhcp client leases" so that it will parse multiple name
+    servers.
+  * Change printf to use "u" instead of "d". Still need to handle 32 bit
+    counter roll.
+  * Handle 32 bit counter roll in "show interfaces".
+
+  [ Tom Grennan ]
+  * fix (or at least improve) bug 2519
+
+  [ Mark O'Brien ]
+
+ -- Mark O'Brien <mobrien@vyatta.com>  Mon, 25 Feb 2008 17:39:32 -0800
+
+vyatta-op (0.1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Tom Grennan <tgrennan@vyatta.com>  Mon, 17 Sep 2007 15:29:15 -0700
